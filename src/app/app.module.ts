@@ -14,6 +14,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { DataProvider } from '../providers/dataProvider';
 import { ApiProvider } from '../providers/api';
+import { SocketIOProvider } from '../providers/socketIOProvider';
 import { HttpModule } from '@angular/http';
 
 @NgModule({
@@ -41,7 +42,8 @@ import { HttpModule } from '@angular/http';
     SplashScreen,
     DataProvider,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
-    ApiProvider
+    ApiProvider,
+    SocketIOProvider
   ]
 })
 export class AppModule {}
