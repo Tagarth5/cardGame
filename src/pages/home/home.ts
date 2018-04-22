@@ -9,6 +9,7 @@ import { LoadingController, Loading } from 'ionic-angular';
 import * as Rx from 'rxjs/Rx';
 import { Observable } from 'rxjs';
 import * as socketIo from 'socket.io-client';
+import { SocketIOProvider } from '../../providers/socketIOProvider';
 
 
 export class Message {
@@ -40,35 +41,20 @@ export class HomePage {
   public isBroadcast = true;
   public sender = '';
 
-  constructor(public apiProvider: ApiProvider, public loadingCtrl: LoadingController, public dataProvider: DataProvider, public navCtrl: NavController, public modalCtrl: ModalController) {
+  constructor(public apiProvider: ApiProvider, public loadingCtrl: LoadingController, public socketIOProvider: SocketIOProvider, public dataProvider: DataProvider, public navCtrl: NavController, public modalCtrl: ModalController) {
 
     this.loading = this.loadingCtrl.create({
       content: 'Please, wait for your turn...'
     });
     
-    this.socket$ = new socketIo('ws://localhost:3000');
-
-
-    this.socket$.on('connect',(event)=>{
-      console.log(event);
-    });
-
-    this.socket$.on('startGame', (event)=>{
-      console.log(event);
-      this.roomId = event;
-    });
-
-    this.socket$.on('availableRooms', (event)=>{
-      console.log(event);
-    });
   }
 
   startGame(){
-    this.socket$.emit("startGame");
+    this.socketIOProvider.startGame();
   }
 
   joinGame(){
-    this.socket$.emit("getAvailableRooms");
+    this.socketIOProvider.joinGame();
   }
 
   openSelection(index: number){
