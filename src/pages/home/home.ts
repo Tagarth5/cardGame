@@ -58,11 +58,17 @@ export class HomePage {
       this.roomId = event;
     });
 
-    
+    this.socket$.on('availableRooms', (event)=>{
+      console.log(event);
+    });
   }
 
   startGame(){
     this.socket$.emit("startGame");
+  }
+
+  joinGame(){
+    this.socket$.emit("getAvailableRooms");
   }
 
   openSelection(index: number){
