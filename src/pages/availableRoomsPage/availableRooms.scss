@@ -1,0 +1,51 @@
+page-availableRooms {
+
+    ion-card{
+        border: 1px solid black;
+        text-align: center;
+        width:25% !important;
+        height:14% !important;
+        display:inline-block;
+        background-color: green !important;
+    }
+
+    .card-title {
+    
+        font-weight: bold;
+        color: #fff;     
+        text-align: center;
+        height:100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+         
+      }
+    
+    .block-score{
+        padding-right: 15px;
+    }
+
+    .span-score{
+        font-weight: bold;
+    }
+
+    .used{
+
+    }
+
+    .blue{
+        color: blue;
+    }
+
+    .red{
+        color: red;
+    }
+
+    .grid-buttons{
+        display: flex !important;
+        justify-content: center !important;
+        align-items: center !important;
+        height: 100%;
+    }
+
+}
