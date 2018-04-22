@@ -1,0 +1,24 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Home</ion-title>
+    <ion-buttons class="block-score" end>
+      <span class="span-score">Puntuacion: {{score}}</span>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding text-center>
+  <ion-grid class="grid-buttons">
+      <ion-row>
+          <button (click)="startGame()" ion-button round>Start game</button>
+      </ion-row>
+      <ion-row>
+          <button ion-button round>Join game</button>
+      </ion-row>
+  </ion-grid>
+
+</ion-content>
+ 

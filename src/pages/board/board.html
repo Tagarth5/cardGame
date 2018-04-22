@@ -1,0 +1,19 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Board</ion-title>
+    <ion-buttons class="block-score" end>
+      <span class="span-score">Puntuacion: {{score}}</span>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-card *ngFor="let card of factCards; let i = index" [class.used]="cardUsed" (click)="!card.used ? openSelection(i): ''" >
+    <div *ngIf="!card.used" [ngClass]=" card.score>0 ?  ['blue'] : ['red']" class="card-title">{{card.score>0 ? '+'+card.score: card.score}}</div>
+    <ion-item *ngIf="card.used" style="color:green" class="card-title"><ion-icon name="md-checkmark"></ion-icon></ion-item>
+  </ion-card>
+</ion-content>
+ 
