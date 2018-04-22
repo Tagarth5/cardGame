@@ -57,23 +57,6 @@ export class HomePage {
       console.log(event);
       this.roomId = event;
     });
-    
-    this.socket$.onmessage = (event) => {
-
-      let message = JSON.parse(event.data);
-
-      if(typeof message.roomId!="undefined") this.roomId = message.roomId;
-
-      console.log(message);
-      this.loading.dismissAll();
-      
-      
-    };
-
-    this.socket$.onopen = (message) => {
-      console.log('WebSockets connection created.');
-      console.log(message);
-    };
 
     
   }
