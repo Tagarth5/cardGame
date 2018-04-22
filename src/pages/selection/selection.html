@@ -1,0 +1,42 @@
+
+<ion-content center text-center>
+   <ion-grid class="outerDiv">
+     <ion-row>
+       <ion-col>  
+            <ion-item [@itemStateFlipIn]="choiceItem" class="choice-item" text-wrap>
+                <p>{{affirNegCard.text1}}                   
+                </p>
+                <p> {{affirNegCard.text2}}</p>              
+            </ion-item>  
+            <ion-item  [@itemStateFlipOut]="choiceItemNumber" class="number-item">
+                    <div [ngClass]="factCard.score>0 ? ['blue'] : ['red']" class="number">{{factCard.score>0 ? '+'+factCard.score : factCard.score}}</div>
+            </ion-item>            
+      </ion-col>
+
+      <ion-col [@itemState]="factItem">
+ 
+        <ion-item class="fact-item" text-wrap>
+           {{factCard.text}}
+        </ion-item>
+    
+      
+    </ion-col>
+
+     </ion-row>
+   
+     <ion-row>
+     
+     </ion-row>
+     <ion-row [@itemStateInY]="inputItem">
+        <ion-row style="width:100%">
+          
+              <ion-item class="ion-item-input">
+                  <ion-textarea></ion-textarea>
+            </ion-item>          
+        </ion-row>
+        <ion-row style="text-align:center; margin-left: auto; margin-right: auto;">        
+            <button ion-button round (click)="sendAnswer()">Enviar</button>         
+      </ion-row>         
+       </ion-row>
+   </ion-grid> 
+</ion-content>

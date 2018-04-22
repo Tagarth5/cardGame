@@ -1,0 +1,120 @@
+page-selection {
+
+    io
+
+    ion-item{
+       
+        color: black !important;
+    }
+
+    .col{            
+        
+        padding:0px;
+    }
+
+    .row{
+        margin:5px;
+        text-align: center;
+    }
+
+    .fact-item{
+        background-color: rgba(0, 132, 255, 0.87) !important;
+        border: 3px solid rgba(0, 4, 255, 0.788);
+        color: white !important;
+        height:100%;
+    }
+
+    .choice-item{
+        background-color: rgb(133, 223, 15) !important;
+        border: 3px solid  rgb(100, 163, 17) !important;
+        color: black !important;
+        height:100%; 
+        position:absolute; 
+        z-index:1;
+        backface-visibility: hidden; 
+    }
+
+    .text{
+        position: absolute;
+    }
+
+    .number-item{
+        position: absolute;
+        background-color: rgb(133, 223, 15) !important;
+        border: 3px solid  rgb(100, 163, 17) !important;
+        color: black !important;
+        height:100%;
+        opacity: 1;
+        z-index:2;
+        backface-visibility: hidden;
+    }
+
+    .choice-item p{
+        color: black !important;
+        text-align:center;
+    }
+
+    .number-item div{   
+        text-align:center;
+    }
+
+    ion-item {
+    
+        font-weight: bold;
+        color: #fff;     
+        text-align: center;
+        display: block;
+        align-items: center;
+        justify-content: center;
+         
+      }
+
+    ion-input{
+       
+        border: black;
+    }
+
+    .ion-card-input{
+        display: flex!important;
+        align-content: center!important;
+        align-items: center!important;
+        background-color: transparent !important;
+        border: transparent !important;
+        box-shadow: 0px 0px 0px rgba(0, 0, 0, 0.5);
+        height:10% !important;
+    }
+
+    .ion-item-input{
+       
+    }
+
+    .item-inner{
+        border: 0px !important;
+    }
+
+    .content-md{
+        background-color: transparent;
+    }
+
+    .scroll-content{
+        padding:0px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+    }
+
+    ion-grid{
+        padding:0px !important;
+    }
+
+    .blue{
+        color: blue;
+    }
+
+    .red{
+        color: red;
+    }
+
+    
+}
